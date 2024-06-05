@@ -8,22 +8,39 @@
           <load src="/src/html/button.html" width="16" height="16" icon="plus" text="Create new" modificator="" />
         </div>
       </div>
+      <ul class="board__tabs tabs">
+        <li class="tabs__item">
+          <load src="/src/html/tab.html" text="Open" modificator="" />
+        </li>
+        <li class="tabs__item">
+          <load src="/src/html/tab.html" text="Draft" modificator="tab--active" />
+        </li>
+      </ul>
       <ul class="board__vacancies vacancies">
         <li class="vacancies__item">
-          <article class="vacancy-card vacancy-card--dark">
+          <article class="vacancy-card">
             <div class="vacancy-card__inner">
-              <div class="vacancy-card__header">
-                <h2 class="vacancy-card__title">
-                  <a href="#">Demo: IT Project Manager</a>
-                </h2>
-                <div class="vacancy-card__count">398</div>
-              </div>
-              <div class="vacancy-card__text">
-                <p>That’s an example how will look the vacancy, once you create it</p>
+              <h2 class="vacancy-card__title">
+                <a href="#">IT Project Manager</a>
+              </h2>
+              <div class="vacancy-card__text vacancy-card__text--message">
+                <p>You're all set!</p>
+                <p>Let’s publish the vacancy</p>
               </div>
             </div>
             <div class="vacancy-card__bottom">
               <a class="badge" href="#">Soft skills</a>
+              <time class="time" datetime="2024-03-12">March 12, 2024</time>
+            </div>
+          </article>
+        </li>
+        <li class="vacancies__item">
+          <article class="vacancy-card">
+            <h2 class="vacancy-card__title">
+              <a href="#">Backend Developer</a>
+            </h2>
+            <div class="vacancy-card__bottom">
+              <a class="badge badge--blue" href="#">Hard skills</a>
               <time class="time" datetime="2024-03-12">March 12, 2024</time>
             </div>
           </article>

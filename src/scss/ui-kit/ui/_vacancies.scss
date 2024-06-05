@@ -5,7 +5,6 @@
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: repeat(auto-fill, minmax(352px, 1fr));
-  grid-auto-rows: 1fr;
   gap: 16px;
 
   // .vacancies__item
@@ -33,16 +32,16 @@
     --vacancy-card-title-color: #{variables.$color-white};
     --vacancy-card-text-color: #f2f2f3;
     --vacancy-card-message-background-color: #{variables.$color-background};
+    --badge-outline-color: #{variables.$color-light};
     --time-color: #cacbd0;
   }
 
   // .vacancy-card__inner
   &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
     inline-size: 100%;
-
-    > *:last-child {
-      margin-block-end: 0;
-    }
   }
 
   // .vacancy-card__header
@@ -51,7 +50,6 @@
     justify-content: space-between;
     align-items: start;
     gap: 60px;
-    margin-block-end: 12px;
   }
 
   // .vacancy-card__title

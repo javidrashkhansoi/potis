@@ -1,0 +1,46 @@
+@use "/src/scss/mixins/mixins";
+@use "/src/scss/variables/variables";
+
+.tabs {
+  display: flex;
+  grid-auto-flow: column;
+  inline-size: fit-content;
+  padding: 4px;
+  background-color: #f2f2f3;
+  border-radius: 12px;
+
+  // .tabs__item
+  &__item {
+  }
+}
+
+.tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-inline-size: 120px;
+  min-block-size: 40px;
+  padding-block: 5px;
+  padding-inline: 12px;
+  font-weight: 500;
+  text-align: center;
+  color: #323339;
+  border-radius: 8px;
+
+  @include mixins.prefers-reduced-motion {
+    transition-property: color, background-color;
+    transition-duration: 0.3s;
+  }
+
+  &:not(&--active) {
+    @include mixins.hover {
+      color: variables.$color-hover;
+    }
+  }
+
+  // .tab--active
+  &--active {
+    color: variables.$color-background;
+    background-color: variables.$color-white;
+  }
+}

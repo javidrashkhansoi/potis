@@ -2,6 +2,8 @@
 @use "/src/scss/variables/variables";
 
 .button {
+  --outline-color: #{variables.$color-background};
+
   display: flex;
   align-items: center;
   gap: 8px;

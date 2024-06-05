@@ -57,6 +57,8 @@
 }
 
 .upgrade {
+  --outline-color: #{variables.$color-light};
+
   display: flex;
   align-items: center;
   gap: 4px;

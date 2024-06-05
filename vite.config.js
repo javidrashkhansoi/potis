@@ -46,6 +46,8 @@ export default defineConfig({
       input: {
         pages: resolve(__dirname, "pages.html"),
         demo: resolve(__dirname, "demo/index.html"),
+        "created-vacancy-open": resolve(__dirname, "created-vacancy-open/index.html"),
+        "created-vacancy-draft": resolve(__dirname, "created-vacancy-draft/index.html"),
       },
     },
   },
