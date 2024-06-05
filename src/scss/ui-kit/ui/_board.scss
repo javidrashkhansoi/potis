@@ -1,0 +1,33 @@
+.board {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  padding-block: 4px calc(4 / 1440 * 100vw);
+  padding-inline: calc(4 / 1440 * 100vw);
+
+  // .board__block
+  &__block {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    padding-block: 26px;
+    background-color: #f7f7f8;
+    border-radius: 20px;
+  }
+
+  // .board__container
+  &__container {
+    > *:last-child {
+      margin-block-end: 0;
+    }
+  }
+
+  // .board__header
+  &__header {
+    margin-block-end: 14px;
+  }
+
+  // .board__vacancies
+  &__vacancies {
+  }
+}

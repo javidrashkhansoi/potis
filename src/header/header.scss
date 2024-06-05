@@ -1,0 +1,137 @@
+@use "/src/scss/mixins/mixins";
+@use "/src/scss/variables/variables";
+
+.header {
+  color: variables.$color-light;
+
+  // .header__container
+  &__container {
+  }
+
+  // .header__inner
+  &__inner {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-block: 14px;
+  }
+}
+
+.logo {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex: 1 1 auto;
+  font-family: variables.$font-noto-sans;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1;
+  color: variables.$color-white;
+
+  // .logo__inner
+  &__inner {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    @include mixins.prefers-reduced-motion {
+      transition-property: color;
+      transition-duration: 0.3s;
+    }
+
+    @include mixins.hover {
+      color: variables.$color-hover;
+    }
+  }
+
+  // .logo__icon
+  &__icon {
+    flex: 0 0 auto;
+    font-size: 0;
+    color: variables.$color-hover;
+  }
+
+  // .logo__text
+  &__text {
+  }
+}
+
+.upgrade {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  min-block-size: 32px;
+  padding-block: 5px;
+  padding-inline: 12px;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 1.23;
+  color: #20545a;
+  background-color: #b4dfe4;
+  border-radius: 16px;
+
+  @include mixins.prefers-reduced-motion {
+    transition-property: color, background-color;
+    transition-duration: 0.3s;
+  }
+
+  @include mixins.hover {
+    color: variables.$color-light;
+    background-color: variables.$color-hover;
+  }
+
+  // .upgrade__icon
+  &__icon {
+    flex: 0 0 auto;
+    font-size: 0;
+  }
+
+  // .upgrade__text
+  &__text {
+  }
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-inline: 8px 12px;
+  font-weight: 600;
+
+  @include mixins.prefers-reduced-motion {
+    transition-property: color;
+    transition-duration: 0.3s;
+  }
+
+  @include mixins.hover {
+    color: variables.$color-hover;
+
+    .profile__icon {
+      color: variables.$color-light;
+      background-color: variables.$color-hover;
+    }
+  }
+
+  // .profile__icon
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+    inline-size: 32px;
+    aspect-ratio: 1 / 1;
+    font-size: 0;
+    color: #20545a;
+    background-color: #ced4ee;
+    border-radius: 50%;
+
+    @include mixins.prefers-reduced-motion {
+      transition-property: color, background-color;
+      transition-duration: 0.3s;
+    }
+  }
+
+  // .profile__text
+  &__text {
+  }
+}

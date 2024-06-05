@@ -1,0 +1,14 @@
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+
+  // .page-header__buttons
+  &__buttons {
+    display: flex;
+    align-items: center;
+    align-self: start;
+    gap: 8px;
+  }
+}

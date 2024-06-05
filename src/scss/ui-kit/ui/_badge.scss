@@ -1,0 +1,27 @@
+@use "/src/scss/mixins/mixins";
+@use "/src/scss/variables/variables";
+
+.badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-block-size: 20px;
+  padding-block: 1px;
+  padding-inline: 9px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.38;
+  text-align: center;
+  color: var(--badge-color, #53389a);
+  background-color: var(--badge-background-color, #e7e2f4);
+  border-radius: 10px;
+
+  @include mixins.prefers-reduced-motion {
+    transition-property: filter;
+    transition-duration: 0.3s;
+  }
+
+  @include mixins.hover {
+    filter: hue-rotate(45deg);
+  }
+}

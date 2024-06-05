@@ -1,0 +1,35 @@
+@use "/src/scss/mixins/mixins";
+@use "/src/scss/variables/variables";
+
+.button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-block-size: 48px;
+  padding-block: 5px;
+  padding-inline: 16px;
+  font-weight: 600;
+  color: variables.$color-white;
+  background-color: #4056b4;
+  border-radius: 12px;
+
+  @include mixins.prefers-reduced-motion {
+    transition-property: color, background-color;
+    transition-duration: 0.3s;
+  }
+
+  @include mixins.hover {
+    color: variables.$color-light;
+    background-color: variables.$color-hover;
+  }
+
+  // .button__icon
+  &__icon {
+    flex: 0 0 auto;
+    font-size: 0;
+  }
+
+  // .button__text
+  &__text {
+  }
+}

@@ -1,0 +1,12 @@
+@use "/src/scss/variables/variables";
+
+body {
+  font-family: variables.$font-montserrat;
+  font-size: variables.$font-size;
+  line-height: variables.$line-height;
+  background-color: variables.$color-background;
+
+  .scroll-lock & {
+    overflow: hidden;
+  }
+}

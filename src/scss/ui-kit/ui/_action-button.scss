@@ -1,0 +1,25 @@
+@use "/src/scss/mixins/mixins";
+@use "/src/scss/variables/variables";
+
+.action-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 auto;
+  inline-size: 48px;
+  aspect-ratio: 1 / 1;
+  font-size: 0;
+  color: #5f616b;
+  background-color: variables.$color-white;
+  border-radius: 12px;
+
+  @include mixins.prefers-reduced-motion {
+    transition-property: color, background-color;
+    transition-duration: 0.3s;
+  }
+
+  @include mixins.hover {
+    color: variables.$color-light;
+    background-color: variables.$color-hover;
+  }
+}
