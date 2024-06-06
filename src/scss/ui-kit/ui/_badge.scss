@@ -32,4 +32,10 @@
     --badge-color: #3072b3;
     --badge-background-color: rgba(54, 151, 241, 0.15);
   }
+
+  // .badge--green
+  &--green {
+    --badge-color: #556575;
+    --badge-background-color: rgba(107, 132, 153, 0.15);
+  }
 }

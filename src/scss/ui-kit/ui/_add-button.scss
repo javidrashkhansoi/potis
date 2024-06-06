@@ -1,0 +1,48 @@
+@use "/src/scss/mixins/mixins";
+@use "/src/scss/variables/variables";
+
+.add-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  min-block-size: 36px;
+  padding-block: 5px;
+  padding-inline: 16px;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 1.23;
+  color: #323339;
+  background-color: variables.$color-white;
+  border-radius: 8px;
+
+  @include mixins.prefers-reduced-motion {
+    transition-property: color, background-color;
+    transition-duration: 0.3s;
+  }
+
+  @include mixins.hover {
+    color: variables.$color-light;
+    background-color: variables.$color-hover;
+
+    .add-button__icon {
+      color: variables.$color-light;
+    }
+  }
+
+  // .add-button__icon
+  &__icon {
+    flex: 0 0 auto;
+    font-size: 0;
+    color: variables.$color-background;
+
+    @include mixins.prefers-reduced-motion {
+      transition-property: color;
+      transition-duration: 0.3s;
+    }
+  }
+
+  // .add-button__text
+  &__text {
+  }
+}
