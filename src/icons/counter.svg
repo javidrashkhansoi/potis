@@ -1,0 +1,4 @@
+<symbol id="counter" viewBox="0 0 24 24">
+  <path fill="none" stroke-linecap="round" stroke-width="2" d="M12 7.8h5.8M8.7 12h10.8M8.7 16.2h7.5" />
+  <path stroke="none" fill-rule="evenodd" clip-rule="evenodd" d="M9.5 4.5v5H7.8V6.2L6.6 7V5.7l1.2-1.2h1.7Z" />
+</symbol>

@@ -1,0 +1,37 @@
+@use "/src/scss/mixins/mixins";
+@use "/src/scss/variables/variables";
+
+.editor-tabs {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+
+  // .editor-tabs__item
+  &__item {
+  }
+}
+
+.editor-tab {
+  font-weight: 500;
+  color: #5f616b;
+  text-decoration: underline 2px solid transparent;
+  text-underline-position: under;
+  text-underline-offset: 7px;
+
+  @include mixins.prefers-reduced-motion {
+    transition-property: text-decoration-color, color;
+    transition-duration: 0.3s;
+  }
+
+  &:not(&--active) {
+    @include mixins.hover {
+      color: variables.$color-hover;
+    }
+  }
+
+  // .editor-tab--active
+  &--active {
+    text-decoration-color: #919ed8;
+    color: variables.$color-background;
+  }
+}

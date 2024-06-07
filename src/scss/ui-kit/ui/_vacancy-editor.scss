@@ -1,0 +1,50 @@
+@use "/src/scss/mixins/mixins";
+@use "/src/scss/variables/variables";
+
+.vacancy-editor {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  gap: 30px;
+  padding-block: 30px 25px;
+  padding-inline: 24px;
+  background-color: variables.$color-white;
+  border-radius: 16px;
+
+  // .vacancy-editor__header
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+  }
+
+  // .vacancy-editor__tabs
+  &__tabs {
+  }
+
+  // .vacancy-editor__action
+  &__action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+    inline-size: 36px;
+    aspect-ratio: 1 / 1;
+    font-size: 0;
+    color: #878994;
+
+    @include mixins.prefers-reduced-motion {
+      transition-property: color;
+      transition-duration: 0.3s;
+    }
+
+    @include mixins.hover {
+      color: variables.$color-hover;
+    }
+  }
+
+  // .vacancy-editor__form
+  &__form {
+  }
+}

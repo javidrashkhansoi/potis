@@ -18,13 +18,15 @@
   background-color: var(--badge-background-color, #e7e2f4);
   border-radius: 10px;
 
-  @include mixins.prefers-reduced-motion {
-    transition-property: filter;
-    transition-duration: 0.3s;
-  }
+  &[href] {
+    @include mixins.prefers-reduced-motion {
+      transition-property: filter;
+      transition-duration: 0.3s;
+    }
 
-  @include mixins.hover {
-    filter: hue-rotate(45deg);
+    @include mixins.hover {
+      filter: hue-rotate(45deg);
+    }
   }
 
   // .badge--blue
@@ -37,5 +39,17 @@
   &--green {
     --badge-color: #556575;
     --badge-background-color: rgba(107, 132, 153, 0.15);
+  }
+
+  // .badge--gray
+  &--gray {
+    --badge-color: rgba(0, 0, 0, 0.7);
+    --badge-background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  // .badge--cyan
+  &--cyan {
+    --badge-color: #2d8b5d;
+    --badge-background-color: #78c5ce;
   }
 }

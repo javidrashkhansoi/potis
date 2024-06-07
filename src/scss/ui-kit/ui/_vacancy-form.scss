@@ -1,0 +1,74 @@
+@use "/src/scss/mixins/mixins";
+@use "/src/scss/variables/variables";
+
+.vacancy-form {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  counter-reset: questions;
+
+  // .vacancy-form__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    &:has([data-scroll]) {
+      flex: 1 1 auto;
+    }
+
+    &:not(:last-child) {
+      margin-block-end: 20px;
+    }
+  }
+
+  // .vacancy-form__checkbox
+  &__checkbox {
+    &:not(:last-child) {
+      margin-block-end: 12px;
+    }
+  }
+
+  // .vacancy-form__question
+  &__question {
+    &:not(:last-child) {
+      margin-block-end: 12px;
+    }
+  }
+
+  // .vacancy-form__label
+  &__label {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 1.23;
+    color: variables.$color-background;
+    cursor: default;
+  }
+
+  // .vacancy-form__input
+  &__input {
+    block-size: 48px;
+    padding-inline: 16px;
+    background-color: #f7f7f8;
+    border: 2px solid transparent;
+    border-radius: 12px;
+
+    @include mixins.prefers-reduced-motion {
+      transition-property: border-color;
+      transition-duration: 0.3s;
+    }
+
+    &:focus {
+      border-color: variables.$color-hover;
+    }
+
+    &::placeholder {
+      opacity: 0.5;
+    }
+  }
+
+  // .vacancy-form__description
+  &__description {
+    flex: 1 1 auto;
+  }
+}

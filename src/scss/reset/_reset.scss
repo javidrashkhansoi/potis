@@ -32,6 +32,7 @@ a {
 
 textarea:focus-visible,
 input:focus-visible,
+*[contenteditable]:focus-visible,
 :focus,
 :active {
   outline: none;

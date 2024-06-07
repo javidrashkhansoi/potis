@@ -1,0 +1,75 @@
+@use "/src/scss/mixins/mixins";
+@use "/src/scss/variables/variables";
+
+.skill {
+  padding-block: 8px;
+  padding-inline: 12px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+
+  @include mixins.prefers-reduced-motion {
+    transition-property: color, background-color;
+    transition-duration: 0.3s;
+  }
+
+  &:has(.skill-checkbox__input:checked) {
+    color: variables.$color-black;
+    background-color: #e1e5f6;
+  }
+
+  // .skill__checkbox
+  &__checkbox {
+    margin-block-end: 5px;
+  }
+
+  // .skill__text
+  &__text {
+  }
+}
+
+.skill-checkbox {
+  // .skill-checkbox__label
+  &__label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+  }
+
+  // .skill-checkbox__icon
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+    inline-size: 20px;
+    aspect-ratio: 1 / 1;
+    font-size: 0;
+    color: transparent;
+    border: 2px solid #ababab;
+    border-radius: 5px;
+
+    @include mixins.prefers-reduced-motion {
+      transition-property: color, background-color, border-color;
+      transition-duration: 0.3s;
+    }
+
+    .skill-checkbox:has(.skill-checkbox__input:checked) & {
+      color: variables.$color-white;
+      background-color: #4056b4;
+      border-color: #4056b4;
+    }
+
+    svg {
+      transform: translateY(1px);
+    }
+  }
+
+  // .skill-checkbox__text
+  &__text {
+  }
+
+  // .skill-checkbox__input
+  &__input {
+  }
+}

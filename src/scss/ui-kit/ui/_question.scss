@@ -1,0 +1,26 @@
+@use "/src/scss/variables/variables";
+
+.question {
+  padding: 12px;
+  color: variables.$color-black;
+  background-color: #f8f8f8;
+  border-radius: 12px;
+
+  // .question__title
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-block-end: 4px;
+    font-weight: 600;
+
+    &::before {
+      content: counter(questions) ".";
+      counter-increment: questions;
+    }
+  }
+
+  // .question__text
+  &__text {
+  }
+}

@@ -1,0 +1,135 @@
+<section class="board">
+  <div class="board__block">
+    <div class="board__container container">
+      <div class="board__grid">
+        <div class="board__inner">
+          <div class="board__header page-header">
+            <div class="page-header__block">
+              <div class="page-header__label">All vacancies</div>
+              <div class="page-header__inner">
+                <div class="page-header__title">
+                  <load src="/src/html/h1.html" text="IT Project Manager" modificator="" />
+                  <div class="badge badge--cyan">Open</div>
+                </div>
+                <div class="page-header__buttons">
+                  <load src="/src/html/action-button.html" width="16" height="16" icon="dots" modificator="action-button--small" />
+                  <button class="button button--small" data-dialog-id="invite-dialog">
+                    <span class="button__icon" aria-hidden="true">
+                      <svg width="16" height="16">
+                        <use xlink:href="#invite"></use>
+                      </svg>
+                    </span>
+                    <span class="button__text">Invite</span>
+                  </button>
+                </div>
+              </div>
+              <div class="page-header__bottom">
+                <div class="page-header__label">Created:&#32;<time datetime="2024-03-12">March 12, 2024</time></div>
+                <div class="page-header__badge">Soft skills</div>
+              </div>
+            </div>
+          </div>
+          <form class="vacancy-editor" id="vacancy-editor" action="#">
+            <ul class="vacancy-editor__tabs editor-tabs">
+              <li class="editor-tabs__item">
+                <a class="editor-tab" href="#">Requirements</a>
+              </li>
+              <li class="editor-tabs__item">
+                <a class="editor-tab" href="#">Skills</a>
+              </li>
+              <li class="editor-tabs__item">
+                <a class="editor-tab editor-tab--active" href="#">Case</a>
+              </li>
+              <li class="editor-tabs__item">
+                <a class="editor-tab" href="#">Questions</a>
+              </li>
+            </ul>
+            <div class="vacancy-editor__form vacancy-form">
+              <div class="vacancy-form__description description-editor" data-scroll>
+                <div class="description-editor__text" contenteditable="true">
+                  <p>
+                    Visionary Integration Professionals (VIP) provides industry-leading management consulting, system integration, and technology deployment solutions. VIP helps its clients
+                    strengthen mission outcomes by
+                    combining deep industry specialization, agility to adapt as needed, and an unwavering commitment to client satisfaction. VIP brings expertise in how to deploy systems that align
+                    people, processes, and
+                    technology to accelerate strategic change and to deliver business results in partnership with its clients. Since 1996, VIP has worked with over 1,200 public sector and commercial
+                    clients. For more
+                    information, visit https://trustvip.com.
+                  </p>
+                  <p>
+                    Join VIP: A strategic approach to accelerate your career! This is a remote role.
+                  </p>
+                  <p>
+                    <b>Qualifications:</b>
+                  </p>
+                  <ul>
+                    <li>
+                      3 years experience as the primary Scheduler on an IT project.
+                    </li>
+                    <li>
+                      3 years experience with Clarity Project Management Software.
+                    </li>
+                    <li>
+                      5 years of experience applying Information Technology schedule management practices and principles on complex system implementation projects, using Microsoft Project Server and
+                      Project Professional to
+                      manage large (>3,000 line) schedules with subprojects and >100 resources, within the last 10 years.
+                    </li>
+                  </ul>
+                  <p>
+                    The compensation for this position is $110,000 to $120,000 per year depending on experience and qualifications. Employees are also eligible for performance-based bonus/ to
+                    participate in a
+                    performance-based incentive plan.
+                  </p>
+                </div>
+                <ul class="description-editor__buttons font-actions">
+                  <li class="font-actions__item">
+                    <button class="font-actions__button" type="button">
+                      <svg width="24" height="24" aria-hidden="true">
+                        <use xlink:href="#bold"></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="font-actions__item">
+                    <button class="font-actions__button" type="button">
+                      <svg width="24" height="24" aria-hidden="true">
+                        <use xlink:href="#italic"></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="font-actions__item">
+                    <button class="font-actions__button" type="button">
+                      <svg width="24" height="24" aria-hidden="true">
+                        <use xlink:href="#list"></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="font-actions__item">
+                    <button class="font-actions__button" type="button">
+                      <svg width="24" height="24" aria-hidden="true">
+                        <use xlink:href="#counter"></use>
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </form>
+        </div>
+        <aside class="suggestions">
+          <ul class="suggestions__list">
+            <li class="suggestions__item">
+              <article class="suggestion suggestion--green">
+                <div class="suggestion__image ibg"></div>
+                <div class="suggestion__inner">
+                  <h2 class="suggestion__title">Some motivational title</h2>
+                  <p class="suggestion__text">Subheader with important information about current status</p>
+                  <button class="suggestion__button">Let’s start</button>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </div>
+</section>

@@ -25,6 +25,14 @@
     background-color: variables.$color-hover;
   }
 
+  // .button--small
+  &--small {
+    min-block-size: 36px;
+    font-size: 13px;
+    line-height: 1.23;
+    border-radius: 8px;
+  }
+
   // .button__icon
   &__icon {
     flex: 0 0 auto;

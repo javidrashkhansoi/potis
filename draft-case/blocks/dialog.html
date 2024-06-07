@@ -1,0 +1,28 @@
+<dialog class="dialog" id="invite-dialog">
+  <div class="dialog__inner" data-dialog="inner">
+    <button class="dialog__close" data-dialog="close">
+      <svg width="13" height="13" aria-hidden="true">
+        <use xlink:href="#close"></use>
+      </svg>
+    </button>
+    <h2 class="dialog__title">Invite candidates</h2>
+    <div class="dialog__text">
+      <p>Enter email address (use comma for separate emails)</p>
+    </div>
+    <div class="dialog__emails emails">
+      <span class="emails__item email">
+        <span class="email__text">hrmanager@gmail.com</span>
+        <button class="email__icon" aria-hidden="true">
+          <svg width="13" height="13">
+            <use xlink:href="#close"></use>
+          </svg>
+        </button>
+      </span>
+      <span class="emails__item email" contenteditable="true"></span>
+    </div>
+    <div class="dialog__buttons">
+      <button class="dialog__button" data-dialog="close">Cancel</button>
+      <button class="dialog__button dialog__button--blue">Invite</button>
+    </div>
+  </div>
+</dialog>
