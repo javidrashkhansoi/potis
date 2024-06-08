@@ -17,10 +17,24 @@
     justify-content: space-between;
     align-items: center;
     gap: 60px;
+
+    &:has(.active[data-edit]) {
+      .vacancy-editor__action {
+        opacity: 1;
+        visibility: inherit;
+      }
+    }
   }
 
   // .vacancy-editor__tabs
   &__tabs {
+  }
+
+  // .vacancy-editor__panels
+  &__panels {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
   }
 
   // .vacancy-editor__action
@@ -33,9 +47,11 @@
     aspect-ratio: 1 / 1;
     font-size: 0;
     color: #878994;
+    opacity: 0;
+    visibility: hidden;
 
     @include mixins.prefers-reduced-motion {
-      transition-property: color;
+      transition-property: color, opacity, visibility;
       transition-duration: 0.3s;
     }
 

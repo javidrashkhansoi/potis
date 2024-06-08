@@ -23,14 +23,14 @@
     transition-duration: 0.3s;
   }
 
-  &:not(&--active) {
+  &:not(.active) {
     @include mixins.hover {
       color: variables.$color-hover;
     }
   }
 
   // .editor-tab--active
-  &--active {
+  &.active {
     text-decoration-color: #919ed8;
     color: variables.$color-background;
   }

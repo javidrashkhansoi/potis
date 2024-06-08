@@ -6,6 +6,10 @@
   margin-inline: auto;
   text-align: center;
 
+  &[hidden] {
+    display: none;
+  }
+
   > *:last-child {
     margin-block-end: 0;
   }

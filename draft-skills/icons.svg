@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-  <load src="/src/icons/import.svg" icon="dots" />
-  <load src="/src/icons/import.svg" icon="pen" />
-  <load src="/src/icons/import.svg" icon="play" />
-  <load src="/src/icons/import.svg" icon="check" />
-  <load src="/src/icons/import.svg" icon="close" />
-</svg>

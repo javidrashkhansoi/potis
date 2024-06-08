@@ -52,6 +52,13 @@
     margin-block-end: 12px;
   }
 
+  // .board__panels
+  &__panels {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+  }
+
   // .board__vacancies
   &__vacancies {
   }

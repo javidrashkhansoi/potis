@@ -123,16 +123,18 @@
 .emails {
   position: relative;
   isolation: isolate;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: start;
-  gap: 8px;
   min-block-size: 200px;
-  padding-block: 10px;
-  padding-inline: 12px;
+  padding-block: 6px;
+  padding-inline: 8px;
   border: 1px solid #cacbd0;
   border-radius: 12px;
   overflow: hidden;
+
+  &::after {
+    content: "";
+    flex: 1 1 100%;
+    margin-block-start: auto;
+  }
 
   @include mixins.prefers-reduced-motion {
     transition-property: border-color;
@@ -149,23 +151,24 @@
 }
 
 .email {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 4px;
-  min-block-size: 30px;
-  padding-block: 4px;
-  font-weight: 500;
-  white-space: nowrap;
-  color: #393939;
-  background-color: #f8f8f8;
-  border-radius: 8px;
+  display: inline-flex;
 
   &:not(:empty) {
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    min-block-size: 30px;
+    margin: 4px;
+    padding-block: 4px;
     padding-inline: 8px;
+    font-weight: 500;
+    white-space: nowrap;
+    color: #393939;
+    background-color: #f8f8f8;
+    border-radius: 8px;
   }
 
-  &:empty {
+  &[contenteditable] {
     &::after {
       content: "";
       position: absolute;

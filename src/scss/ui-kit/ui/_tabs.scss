@@ -32,14 +32,13 @@
     transition-duration: 0.3s;
   }
 
-  &:not(&--active) {
+  &:not(.active) {
     @include mixins.hover {
       color: variables.$color-hover;
     }
   }
 
-  // .tab--active
-  &--active {
+  &.active {
     color: variables.$color-background;
     background-color: variables.$color-white;
   }

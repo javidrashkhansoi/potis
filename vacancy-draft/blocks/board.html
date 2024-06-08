@@ -1,0 +1,74 @@
+<section class="board">
+  <div class="board__block">
+    <div class="board__container container">
+      <div class="board__grid">
+        <div class="board__inner">
+          <div class="board__header page-header">
+            <div class="page-header__block">
+              <div class="page-header__label">All vacancies</div>
+              <div class="page-header__inner">
+                <div class="page-header__title">
+                  <load src="/src/html/h1.html" text="Demo: IT Project Manager" modificator="" />
+                  <div class="badge">Draft</div>
+                </div>
+                <div class="page-header__buttons">
+                  <load src="/src/html/action-button.html" width="16" height="16" icon="dots" modificator="action-button--small" />
+                  <load src="/src/html/button.html" width="16" height="16" icon="pen" text="Edit" modificator="button--small" />
+                </div>
+              </div>
+              <div class="page-header__bottom">
+                <div class="page-header__label">Created:&#32;<time datetime="2024-03-12">March 12, 2024</time></div>
+                <div class="page-header__badge">Soft skills</div>
+              </div>
+            </div>
+          </div>
+          <form class="vacancy-editor" id="vacancy-editor" action="#" data-tabs="inner">
+            <div class="vacancy-editor__header">
+              <ul class="vacancy-editor__tabs editor-tabs">
+                <li class="editor-tabs__item">
+                  <button class="editor-tab active" type="button" data-tab="requirements">Requirements</button>
+                </li>
+                <li class="editor-tabs__item">
+                  <button class="editor-tab" type="button" data-tab="skills" data-edit>Skills</button>
+                </li>
+                <li class="editor-tabs__item">
+                  <button class="editor-tab" type="button" data-tab="case">Case</button>
+                </li>
+                <li class="editor-tabs__item">
+                  <button class="editor-tab" type="button" data-tab="questions">Questions</button>
+                </li>
+              </ul>
+              <button class="vacancy-editor__action" type="button" aria-label="#">
+                <svg width="16" height="16" aria-hidden="true">
+                  <use xlink:href="#pen"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="vacancy-editor__panels" data-panels="inner">
+              <load src="/vacancy-draft/blocks/requirements.html" />
+              <load src="/vacancy-draft/blocks/skills.html" />
+              <load src="/vacancy-draft/blocks/case.html" />
+              <load src="/vacancy-draft/blocks/questions.html" />
+            </div>
+          </form>
+        </div>
+        <aside class="suggestions">
+          <ul class="suggestions__list">
+            <li class="suggestions__item">
+              <article class="suggestion">
+                <div class="suggestion__image ibg">
+                  <img src="/images/suggestions/1.png" alt="">
+                </div>
+                <div class="suggestion__inner">
+                  <h2 class="suggestion__title">Look! You're all set</h2>
+                  <p class="suggestion__text">All that's left is to invite your candidates.</p>
+                  <button class="suggestion__button">Let’s start</button>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </div>
+</section>

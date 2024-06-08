@@ -7,6 +7,10 @@
   flex: 1 1 auto;
   counter-reset: questions;
 
+  &[hidden] {
+    display: none;
+  }
+
   // .vacancy-form__item
   &__item {
     display: flex;

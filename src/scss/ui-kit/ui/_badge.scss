@@ -52,4 +52,10 @@
     --badge-color: #2d8b5d;
     --badge-background-color: #78c5ce;
   }
+
+  // .badge--lime
+  &--lime {
+    --badge-color: #2d8b5d;
+    --badge-background-color: rgba(50, 186, 118, 0.15);
+  }
 }

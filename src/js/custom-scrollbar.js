@@ -1,6 +1,6 @@
 import SimpleBar from "simplebar";
 
-const { body } = document;
+const body = document.querySelector(".wrapper");
 /** @type {NodeListOf<HTMLElement>} */
 const customScrolledElements = document.querySelectorAll("[data-scroll]");
 /** @param {HTMLElement} element */

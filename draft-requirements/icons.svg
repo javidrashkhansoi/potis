@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-  <load src="/src/icons/import.svg" icon="bold" />
-  <load src="/src/icons/import.svg" icon="counter" />
-  <load src="/src/icons/import.svg" icon="dots" />
-  <load src="/src/icons/import.svg" icon="italic" />
-  <load src="/src/icons/import.svg" icon="list" />
-  <load src="/src/icons/import.svg" icon="pen" />
-</svg>
